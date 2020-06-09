@@ -45,10 +45,10 @@ services:
 
   nginx:
     extends:
-        file: nginx.yml
-        service: nginx
+      file: nginx.yml
+      service: nginx
     links:
-        - "chirpstack-application-server:chirpstack-application-server"
+      - "chirpstack-application-server:chirpstack-application-server"
 
 volumes:
   postgresqldata:
