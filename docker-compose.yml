@@ -43,6 +43,13 @@ services:
     ports:
       - 1883:1883
 
+  nginx:
+    extends:
+        file: nginx.yml
+        service: nginx
+    links:
+        - "chirpstack-application-server:chirpstack-application-server"
+
 volumes:
   postgresqldata:
   redisdata:
